@@ -1,3 +1,4 @@
+{{ config(materialized="ephemeral") }}
 with raw_listings as (select * from airbnb.raw.raw_listings)
 select
     id as listing_id,
